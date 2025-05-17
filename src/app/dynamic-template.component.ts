@@ -4,6 +4,9 @@ import * as Handlebars from 'handlebars';
 import { forkJoin } from 'rxjs';
 import { TemplateService } from './template.service';
 
+Handlebars.registerHelper('eq', (a, b) => a === b);
+Handlebars.registerHelper('notEq', (a, b) => a !== b);
+
 @Component({
   selector: 'app-dynamic-template',
   template: `
@@ -18,12 +21,7 @@ export class DynamicTemplateComponent implements OnInit {
   sanitizer = inject(DomSanitizer);
   html!: SafeHtml;
 
-
   async ngOnInit(): Promise<void> {
-
-    Handlebars.registerHelper('eq', (a, b) => a === b);
-    Handlebars.registerHelper('notEq', (a, b) => a !== b);
-
     forkJoin([
       this.templateService.getTemplate(),
       this.templateService.getData()
