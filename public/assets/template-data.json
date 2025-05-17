@@ -1,0 +1,28 @@
+{
+  "user": {
+    "name": "John Doe",
+    "email": "jane.doe@example.com",
+    "address": {
+      "street": "123 Elm Street",
+      "city": "Springfield",
+      "zip": "12345"
+    },
+    "skills": [
+      "Angular",
+      "TypeScript",
+      "Node.js"
+    ],
+    "projects": [
+      {
+        "title": "Customer Portal",
+        "description": "A web app for managing customer information and support tickets.",
+        "isActive": true
+      },
+      {
+        "title": "Internal Dashboard",
+        "description": "A private dashboard for business analytics and monitoring.",
+        "isActive": false
+      }
+    ]
+  }
+}
