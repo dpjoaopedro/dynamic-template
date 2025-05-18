@@ -21,7 +21,7 @@ export class DynamicTemplateComponent implements OnInit {
   sanitizer = inject(DomSanitizer);
   html!: SafeHtml;
 
-  async ngOnInit(): Promise<void> {
+  ngOnInit() {
     forkJoin([
       this.templateService.getTemplate(),
       this.templateService.getData()
